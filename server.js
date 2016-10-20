@@ -1,36 +1,30 @@
 'use strict';
 
 const Hapi = require('hapi');
+const Inert = require('inert');
+const Path = require('path');
 
 // Create a server with a host and port
 const server = new Hapi.Server();
+
 server.connection({
     host: 'localhost',
     port: 8000
 });
 
-server.register(require('inert'), (err) => {
-  if (err) {
-    throw err;
-  }
-  // Add the route
+
+server.register(Inert, (err) => {
   server.route({
     method: 'GET',
-    path:'/hello',
-    handler: function (request, reply) {
-        return reply('hello world');
+    path: '/{param*}',
+    handler: {
+      directory: {
+        path: Path.join(__dirname, 'public'),
+        listing: true
+      }
     }
   });
 
-  server.route({
-       method: 'GET',
-       path: '/',
-       handler: function (request, reply) {
-           reply.file('./Views/index.html');
-       }
-   });
-
-  // Start the server
   server.start((err) => {
     if (err) {
         throw err;
