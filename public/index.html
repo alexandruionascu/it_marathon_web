@@ -1,39 +1,38 @@
 <html>
     <head>
-        <title>Alex Ionascu</title>
-        <meta charset="utf-8">
-        <style type='text/css'>
-            html,body {
-              height:250% !important;
-              width:100% !important;
-              margin:0px;
-              padding:0px;
-            }
+      <style type='text/css'>
+        html,body{height:100% !important;width:100% !important; margin:0px; padding:0px;}
 
-            .page {
-              height:20% !important;
-              width:100% !important;
-            }
+        .container {height: 500% !important; width: 100% !important;}
 
-            #front-page {
-              background-image: url('images/white_wall.jpg');
-            }
+        .page {height:20% !important; width:100% !important;}
+
+        #front-page {
+          background-image: url('/images/white_wall.jpg');
+        }
+      </style>
 
 
-        </style>
     </head>
     <body>
-        <div id="front-page" class="page">
-            page1
+        <div id="content" class="container">
+            <div id="front-page" class="page">
+                page1
+            </div>
+            <div id="page2" class="page">
+                page2
+            </div>
+            <div id="page3" class="page">
+                page3
+            </div>
+            <div id="page4" class="page">
+                page4
+            </div>
+            <div id="page5" class="page">
+                page5
+            </div>
         </div>
-        <div id="page2" class="page">
-            page2
-        </div>
-        <div id="page3" class="page">
-            page3
-        </div>
-        <div id="page4" class="page">
-            page4
-        </div>
+
+        <script src="bundle.js"></script>
     </body>
 </html>
