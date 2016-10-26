@@ -1,5 +1,3 @@
-'use strict';
-
 const Hapi = require('hapi');
 const Inert = require('inert');
 const Path = require('path');
@@ -8,29 +6,31 @@ const Path = require('path');
 const server = new Hapi.Server();
 
 server.connection({
-    host: 'localhost',
-    port: 8000
+  host: 'localhost',
+  port: 8000,
 });
 
 
 server.register(Inert, (err) => {
+  if (err) {
+    throw err;
+  }
+
   server.route({
     method: 'GET',
     path: '/{param*}',
     handler: {
       directory: {
         path: Path.join(__dirname, 'public'),
-        listing: true
-      }
-    }
+        listing: true,
+      },
+    },
   });
 
-  server.start((err) => {
-    if (err) {
-        throw err;
+  server.start((serverError) => {
+    if (serverError) {
+      throw serverError;
     }
     console.log('Server running at:', server.info.uri);
-
   });
-
 });
