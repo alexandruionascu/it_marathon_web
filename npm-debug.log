@@ -1,51 +1,24 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'file!' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'webpack' ]
 2 info using npm@3.10.8
 3 info using node@v6.8.1
-4 silly loadCurrentTree Starting
-5 silly install loadCurrentTree
-6 silly install readLocalPackageData
-7 silly fetchPackageMetaData file!
-8 silly fetchOtherPackageData file!
-9 silly cache add args [ 'file!', null ]
-10 verbose cache add spec file!
-11 silly cache add parsed spec Result {
-11 silly cache add   raw: 'file!',
-11 silly cache add   scope: null,
-11 silly cache add   escapedName: null,
-11 silly cache add   name: null,
-11 silly cache add   rawSpec: 'file!',
-11 silly cache add   spec: '/home/abel/Workspace/alexionascu.com/file!',
-11 silly cache add   type: 'local' }
-12 error addLocal Could not install /home/abel/Workspace/alexionascu.com/file!
-13 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/home/abel/Workspace/alexionascu.com/file!'
-13 silly fetchPackageMetaData     at Error (native)
-13 silly fetchPackageMetaData  error for file! { Error: ENOENT: no such file or directory, open '/home/abel/Workspace/alexionascu.com/file!'
-13 silly fetchPackageMetaData     at Error (native)
-13 silly fetchPackageMetaData   errno: -2,
-13 silly fetchPackageMetaData   code: 'ENOENT',
-13 silly fetchPackageMetaData   syscall: 'open',
-13 silly fetchPackageMetaData   path: '/home/abel/Workspace/alexionascu.com/file!' }
-14 silly rollbackFailedOptional Starting
-15 silly rollbackFailedOptional Finishing
-16 silly runTopLevelLifecycles Finishing
-17 silly install printInstalled
-18 verbose stack Error: ENOENT: no such file or directory, open '/home/abel/Workspace/alexionascu.com/file!'
-18 verbose stack     at Error (native)
-19 verbose cwd /home/abel/Workspace/alexionascu.com
-20 error Linux 4.4.0-38-generic
-21 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "file!"
-22 error node v6.8.1
-23 error npm  v3.10.8
-24 error path /home/abel/Workspace/alexionascu.com/file!
-25 error code ENOENT
-26 error errno -2
-27 error syscall open
-28 error enoent ENOENT: no such file or directory, open '/home/abel/Workspace/alexionascu.com/file!'
-29 error enoent ENOENT: no such file or directory, open '/home/abel/Workspace/alexionascu.com/file!'
-29 error enoent This is most likely not a problem with npm itself
-29 error enoent and is related to npm not being able to find a file.
-30 verbose exit [ -2, true ]
+4 verbose stack Error: missing script: webpack
+4 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:151:19)
+4 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:61:5
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+4 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+4 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+4 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:311:12
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at tryToString (fs.js:455:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:442:12)
+5 verbose cwd /home/abel/Workspace/alexionascu.com
+6 error Linux 4.4.0-38-generic
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "webpack"
+8 error node v6.8.1
+9 error npm  v3.10.8
+10 error missing script: webpack
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

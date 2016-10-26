@@ -25,7 +25,7 @@ class Page extends React.Component {
 
     console.log(this.props.background);
 
-    return <div className="page" style={styles}><h1>Blat</h1></div>;
+    return <div className="page" style={styles}> {this.props.children} </div>;
   }
 
 }
@@ -33,6 +33,7 @@ class Page extends React.Component {
 Page.propTypes = {
   background: React.PropTypes.string,
   height: React.PropTypes.string,
+  children: React.PropTypes.element,
 };
 
 module.exports = Page;

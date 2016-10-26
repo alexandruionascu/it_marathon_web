@@ -19,6 +19,7 @@ html { font-size: 100%; }
 }
 .container {
   margin: 0 auto;
+  float: none;
 }
 
 .col-1 {width: 8.33%;}

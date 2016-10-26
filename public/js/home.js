@@ -63,6 +63,9 @@
 	var whiteWall = __webpack_require__(173);
 	var darkWall = __webpack_require__(174);
 	var brownWall = __webpack_require__(175);
+	var orangeWall = __webpack_require__(176);
+	var grayWall = __webpack_require__(177);
+	var profilePicture = __webpack_require__(178);
 
 	function OnePage() {
 	  var styles = {
@@ -70,16 +73,47 @@
 	    width: '100%',
 	    overflow: 'auto'
 	  };
+
+	  var imageStyle = {
+	    width: 'inherit',
+	    borderRadius: '50%'
+	  };
+
+	  var containerStyle = {
+	    backgroundColor: 'blue',
+	    width: '50%',
+	    height: '100%',
+	    display: 'flex',
+	    alignItems: 'center'
+	  };
+
 	  var pageHeight = '20%';
 
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'page-container', style: styles },
-	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: whiteWall }),
-	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall }),
+	    _react2.default.createElement(
+	      _Page2.default,
+	      { height: pageHeight, background: whiteWall },
+	      _react2.default.createElement(
+	        'div',
+	        { style: containerStyle, className: 'container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-6', style: { backgroundColor: 'red' } },
+	          _react2.default.createElement('img', { alt: 'profile', style: imageStyle, src: profilePicture })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-6', style: { backgroundColor: 'orange' } },
+	          _react2.default.createElement('img', { alt: 'profile', src: profilePicture, style: imageStyle })
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: grayWall }),
+	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: orangeWall }),
 	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: brownWall }),
-	    _react2.default.createElement(_Page2.default, { height: pageHeight }),
-	    _react2.default.createElement(_Page2.default, null)
+	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
 	  );
 	}
 
@@ -21504,11 +21538,9 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'page', style: styles },
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Blat'
-	        )
+	        ' ',
+	        this.props.children,
+	        ' '
 	      );
 	    }
 	  }], [{
@@ -21527,7 +21559,8 @@
 
 	Page.propTypes = {
 	  background: _react2.default.PropTypes.string,
-	  height: _react2.default.PropTypes.string
+	  height: _react2.default.PropTypes.string,
+	  children: _react2.default.PropTypes.element
 	};
 
 	module.exports = Page;
@@ -21549,6 +21582,24 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/brown_wall.jpg";
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/orange_wall.jpg";
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/gray_wall.jpg";
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/profile.jpeg";
 
 /***/ }
 /******/ ]);
