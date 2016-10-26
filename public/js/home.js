@@ -60,21 +60,30 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var whitewall = __webpack_require__(173);
+	var whiteWall = __webpack_require__(173);
+	var darkWall = __webpack_require__(174);
+	var brownWall = __webpack_require__(175);
 
 	function OnePage() {
+	  var styles = {
+	    height: '500%',
+	    width: '100%',
+	    overflow: 'auto'
+	  };
+	  var pageHeight = '20%';
+
 	  return _react2.default.createElement(
 	    'div',
-	    null,
-	    _react2.default.createElement(_Page2.default, null),
-	    _react2.default.createElement(_Page2.default, null),
-	    _react2.default.createElement(_Page2.default, null),
-	    _react2.default.createElement(_Page2.default, null),
+	    { className: 'page-container', style: styles },
+	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: whiteWall }),
+	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall }),
+	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: brownWall }),
+	    _react2.default.createElement(_Page2.default, { height: pageHeight }),
 	    _react2.default.createElement(_Page2.default, null)
 	  );
 	}
 
-	_reactDom2.default.render(_react2.default.createElement(OnePage, null), document.getElementById('content'));
+	_reactDom2.default.render(_react2.default.createElement(OnePage, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -21480,7 +21489,14 @@
 	    key: 'render',
 	    value: function render() {
 	      var styles = {
-	        backgroundImage: 'url(' + this.props.background + ')'
+	        backgroundImage: 'url(' + this.props.background + ')',
+	        backgroundAttachment: 'fixed',
+	        backgroundPosition: 'center',
+	        backgroundRepeat: 'no-repeat',
+	        backgroundSize: 'cover',
+	        height: this.props.height,
+	        width: '100%',
+	        overflow: 'auto'
 	      };
 
 	      console.log(this.props.background);
@@ -21498,7 +21514,11 @@
 	  }], [{
 	    key: 'defaultProps',
 	    get: function get() {
-	      return { background: _white_wall2.default };
+	      return {
+	        background: _white_wall2.default,
+	        height: '20%',
+	        overflow: 'auto'
+	      };
 	    }
 	  }]);
 
@@ -21506,7 +21526,8 @@
 	}(_react2.default.Component);
 
 	Page.propTypes = {
-	  background: _react2.default.PropTypes.string
+	  background: _react2.default.PropTypes.string,
+	  height: _react2.default.PropTypes.string
 	};
 
 	module.exports = Page;
@@ -21516,6 +21537,18 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/white_wall.jpg";
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/brown_wall.jpg";
 
 /***/ }
 /******/ ]);

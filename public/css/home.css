@@ -3,14 +3,9 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: auto;
 }
 
-.page-container {
-  height: 500%;
-  width: 100%;
-}
-
-.page {
-  height:20%;
-  width:100%;
+app {
+  overflow: auto;
 }
