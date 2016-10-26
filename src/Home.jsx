@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from './containers/Page';
+import Navbar from './containers/Navbar';
 
 const whiteWall = require('.././public/images/white_wall.jpg');
 const darkWall = require('.././public/images/dark_wall.jpg');
@@ -32,21 +33,25 @@ function OnePage() {
   const pageHeight = '20%';
 
   return (
-    <div className="page-container" style={styles}>
-      <Page height={pageHeight} background={whiteWall}>
-        <div style={containerStyle} className="container">
-          <div className="col-6" style={{ backgroundColor: 'red' }}>
-            <img alt="profile" style={imageStyle} src={profilePicture} />
+    <div>
+      <Navbar>Navbar</Navbar>
+      <div className="page-container" style={styles}>
+
+        <Page height={pageHeight} background={whiteWall}>
+          <div style={containerStyle} className="container">
+            <div className="col-6" style={{ backgroundColor: 'red' }}>
+              <img alt="profile" style={imageStyle} src={profilePicture} />
+            </div>
+            <div className="col-6" style={{ backgroundColor: 'orange' }}>
+              <img alt="profile" src={profilePicture} style={imageStyle} />
+            </div>
           </div>
-          <div className="col-6" style={{ backgroundColor: 'orange' }}>
-            <img alt="profile" src={profilePicture} style={imageStyle} />
-          </div>
-        </div>
-      </Page>
-      <Page height={pageHeight} background={grayWall} />
-      <Page height={pageHeight} background={orangeWall} />
-      <Page height={pageHeight} background={brownWall} />
-      <Page height={pageHeight} background={darkWall} />
+        </Page>
+        <Page height={pageHeight} background={grayWall} />
+        <Page height={pageHeight} background={orangeWall} />
+        <Page height={pageHeight} background={brownWall} />
+        <Page height={pageHeight} background={darkWall} />
+      </div>
     </div>
   );
 }

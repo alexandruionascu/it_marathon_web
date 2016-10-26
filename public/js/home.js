@@ -58,6 +58,10 @@
 
 	var _Page2 = _interopRequireDefault(_Page);
 
+	var _Navbar = __webpack_require__(179);
+
+	var _Navbar2 = _interopRequireDefault(_Navbar);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var whiteWall = __webpack_require__(173);
@@ -91,29 +95,38 @@
 
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'page-container', style: styles },
+	    null,
 	    _react2.default.createElement(
-	      _Page2.default,
-	      { height: pageHeight, background: whiteWall },
-	      _react2.default.createElement(
-	        'div',
-	        { style: containerStyle, className: 'container' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-6', style: { backgroundColor: 'red' } },
-	          _react2.default.createElement('img', { alt: 'profile', style: imageStyle, src: profilePicture })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-6', style: { backgroundColor: 'orange' } },
-	          _react2.default.createElement('img', { alt: 'profile', src: profilePicture, style: imageStyle })
-	        )
-	      )
+	      _Navbar2.default,
+	      null,
+	      'Navbar'
 	    ),
-	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: grayWall }),
-	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: orangeWall }),
-	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: brownWall }),
-	    _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'page-container', style: styles },
+	      _react2.default.createElement(
+	        _Page2.default,
+	        { height: pageHeight, background: whiteWall },
+	        _react2.default.createElement(
+	          'div',
+	          { style: containerStyle, className: 'container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-6', style: { backgroundColor: 'red' } },
+	            _react2.default.createElement('img', { alt: 'profile', style: imageStyle, src: profilePicture })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-6', style: { backgroundColor: 'orange' } },
+	            _react2.default.createElement('img', { alt: 'profile', src: profilePicture, style: imageStyle })
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: grayWall }),
+	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: orangeWall }),
+	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: brownWall }),
+	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
+	    )
 	  );
 	}
 
@@ -21600,6 +21613,37 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/profile.jpeg";
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function Navbar(props) {
+	  var navbarStyle = {
+	    background: 'red',
+	    width: '100%',
+	    position: 'fixed'
+	  };
+	  return _react2.default.createElement(
+	    'div',
+	    { style: navbarStyle },
+	    props.children
+	  );
+	}
+
+	Navbar.propTypes = {
+	  children: _react2.default.PropTypes.element
+	};
+
+	module.exports = Navbar;
 
 /***/ }
 /******/ ]);
