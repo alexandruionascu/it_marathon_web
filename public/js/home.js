@@ -62,6 +62,10 @@
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
+	var _Description = __webpack_require__(180);
+
+	var _Description2 = _interopRequireDefault(_Description);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var whiteWall = __webpack_require__(173);
@@ -84,8 +88,7 @@
 	  };
 
 	  var containerStyle = {
-	    backgroundColor: 'blue',
-	    width: '50%',
+	    width: '70%',
 	    height: '100%',
 	    display: 'flex',
 	    alignItems: 'center'
@@ -112,13 +115,13 @@
 	          { style: containerStyle, className: 'container' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-6', style: { backgroundColor: 'red' } },
+	            { className: 'col-6', style: { display: 'flex', flexDirection: 'row-reverse' } },
 	            _react2.default.createElement('img', { alt: 'profile', style: imageStyle, src: profilePicture })
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-6', style: { backgroundColor: 'orange' } },
-	            _react2.default.createElement('img', { alt: 'profile', src: profilePicture, style: imageStyle })
+	            { className: 'col-6', style: {} },
+	            _react2.default.createElement(_Description2.default, null)
 	          )
 	        )
 	      ),
@@ -21628,9 +21631,10 @@
 
 	function Navbar(props) {
 	  var navbarStyle = {
-	    background: 'red',
+	    background: 'white',
 	    width: '100%',
-	    position: 'fixed'
+	    position: 'fixed',
+	    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)'
 	  };
 	  return _react2.default.createElement(
 	    'div',
@@ -21644,6 +21648,60 @@
 	};
 
 	module.exports = Navbar;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var listStyle = {
+	  listStyle: 'none',
+	  margin: 0,
+	  padding: 0
+	};
+
+	var itemStyle = {
+	  background: 'black',
+	  display: 'table',
+	  color: 'white',
+	  fontFamily: 'Helvetica'
+	};
+
+	function Description() {
+	  return _react2.default.createElement(
+	    'ul',
+	    { style: listStyle },
+	    _react2.default.createElement(
+	      'li',
+	      { style: itemStyle },
+	      'DEVELOPER'
+	    ),
+	    _react2.default.createElement(
+	      'li',
+	      { style: itemStyle },
+	      'HACKER'
+	    ),
+	    _react2.default.createElement(
+	      'li',
+	      { style: itemStyle },
+	      'IT ENTHUSIAST'
+	    ),
+	    _react2.default.createElement(
+	      'li',
+	      { style: itemStyle },
+	      'STUDENT'
+	    )
+	  );
+	}
+
+	module.exports = Description;
 
 /***/ }
 /******/ ]);

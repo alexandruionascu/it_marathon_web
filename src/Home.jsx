@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from './containers/Page';
 import Navbar from './containers/Navbar';
+import Description from './containers/Description';
 
 const whiteWall = require('.././public/images/white_wall.jpg');
 const darkWall = require('.././public/images/dark_wall.jpg');
@@ -23,8 +24,7 @@ function OnePage() {
   };
 
   const containerStyle = {
-    backgroundColor: 'blue',
-    width: '50%',
+    width: '70%',
     height: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -39,11 +39,11 @@ function OnePage() {
 
         <Page height={pageHeight} background={whiteWall}>
           <div style={containerStyle} className="container">
-            <div className="col-6" style={{ backgroundColor: 'red' }}>
+            <div className="col-6" style={{ display: 'flex', flexDirection: 'row-reverse' }}>
               <img alt="profile" style={imageStyle} src={profilePicture} />
             </div>
-            <div className="col-6" style={{ backgroundColor: 'orange' }}>
-              <img alt="profile" src={profilePicture} style={imageStyle} />
+            <div className="col-6" style={{ }}>
+              <Description />
             </div>
           </div>
         </Page>
