@@ -23,8 +23,6 @@ class Page extends React.Component {
       overflow: 'auto',
     };
 
-    console.log(this.props.background);
-
     return <div className="page" style={styles}> {this.props.children} </div>;
   }
 

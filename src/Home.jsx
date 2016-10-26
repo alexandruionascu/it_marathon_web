@@ -9,7 +9,7 @@ const darkWall = require('.././public/images/dark_wall.jpg');
 const brownWall = require('.././public/images/brown_wall.jpg');
 const orangeWall = require('.././public/images/orange_wall.jpg');
 const grayWall = require('.././public/images/gray_wall.jpg');
-const profilePicture = require('.././public/images/profile.jpeg');
+
 
 function OnePage() {
   const styles = {
@@ -18,17 +18,6 @@ function OnePage() {
     overflow: 'auto',
   };
 
-  const imageStyle = {
-    width: 'inherit',
-    borderRadius: '50%',
-  };
-
-  const containerStyle = {
-    width: '70%',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-  };
 
   const pageHeight = '20%';
 
@@ -36,16 +25,8 @@ function OnePage() {
     <div>
       <Navbar>Navbar</Navbar>
       <div className="page-container" style={styles}>
-
         <Page height={pageHeight} background={whiteWall}>
-          <div style={containerStyle} className="container">
-            <div className="col-6" style={{ display: 'flex', flexDirection: 'row-reverse' }}>
-              <img alt="profile" style={imageStyle} src={profilePicture} />
-            </div>
-            <div className="col-6" style={{ }}>
-              <Description />
-            </div>
-          </div>
+          <Description />
         </Page>
         <Page height={pageHeight} background={grayWall} />
         <Page height={pageHeight} background={orangeWall} />

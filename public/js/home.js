@@ -73,25 +73,12 @@
 	var brownWall = __webpack_require__(175);
 	var orangeWall = __webpack_require__(176);
 	var grayWall = __webpack_require__(177);
-	var profilePicture = __webpack_require__(178);
 
 	function OnePage() {
 	  var styles = {
 	    height: '500%',
 	    width: '100%',
 	    overflow: 'auto'
-	  };
-
-	  var imageStyle = {
-	    width: 'inherit',
-	    borderRadius: '50%'
-	  };
-
-	  var containerStyle = {
-	    width: '70%',
-	    height: '100%',
-	    display: 'flex',
-	    alignItems: 'center'
 	  };
 
 	  var pageHeight = '20%';
@@ -110,20 +97,7 @@
 	      _react2.default.createElement(
 	        _Page2.default,
 	        { height: pageHeight, background: whiteWall },
-	        _react2.default.createElement(
-	          'div',
-	          { style: containerStyle, className: 'container' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-6', style: { display: 'flex', flexDirection: 'row-reverse' } },
-	            _react2.default.createElement('img', { alt: 'profile', style: imageStyle, src: profilePicture })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-6', style: {} },
-	            _react2.default.createElement(_Description2.default, null)
-	          )
-	        )
+	        _react2.default.createElement(_Description2.default, null)
 	      ),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: grayWall }),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: orangeWall }),
@@ -21549,8 +21523,6 @@
 	        overflow: 'auto'
 	      };
 
-	      console.log(this.props.background);
-
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'page', style: styles },
@@ -21661,6 +21633,24 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var profilePicture = __webpack_require__(178);
+
+	var imageStyle = {
+	  width: 'inherit',
+	  borderRadius: '50%'
+	};
+	var imageContainerStyle = {
+	  display: 'flex',
+	  flexDirection: 'row-reverse'
+	};
+
+	var containerStyle = {
+	  width: '70%',
+	  height: '100%',
+	  display: 'flex',
+	  alignItems: 'center'
+	};
+
 	var listStyle = {
 	  listStyle: 'none',
 	  margin: 0,
@@ -21676,27 +21666,40 @@
 
 	function Description() {
 	  return _react2.default.createElement(
-	    'ul',
-	    { style: listStyle },
+	    'div',
+	    { style: containerStyle, className: 'container' },
 	    _react2.default.createElement(
-	      'li',
-	      { style: itemStyle },
-	      'DEVELOPER'
+	      'div',
+	      { className: 'col-6', style: imageContainerStyle },
+	      _react2.default.createElement('img', { alt: 'profile', style: imageStyle, src: profilePicture })
 	    ),
 	    _react2.default.createElement(
-	      'li',
-	      { style: itemStyle },
-	      'HACKER'
-	    ),
-	    _react2.default.createElement(
-	      'li',
-	      { style: itemStyle },
-	      'IT ENTHUSIAST'
-	    ),
-	    _react2.default.createElement(
-	      'li',
-	      { style: itemStyle },
-	      'STUDENT'
+	      'div',
+	      { className: 'col-6' },
+	      _react2.default.createElement(
+	        'ul',
+	        { style: listStyle },
+	        _react2.default.createElement(
+	          'li',
+	          { style: itemStyle },
+	          'DEVELOPER'
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { style: itemStyle },
+	          'HACKER'
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { style: itemStyle },
+	          'IT ENTHUSIAST'
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { style: itemStyle },
+	          'STUDENT'
+	        )
+	      )
 	    )
 	  );
 	}
