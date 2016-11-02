@@ -58,21 +58,21 @@
 
 	var _Page2 = _interopRequireDefault(_Page);
 
-	var _Navbar = __webpack_require__(179);
+	var _Navbar = __webpack_require__(174);
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
-	var _Description = __webpack_require__(180);
+	var _Description = __webpack_require__(175);
 
 	var _Description2 = _interopRequireDefault(_Description);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var whiteWall = __webpack_require__(173);
-	var darkWall = __webpack_require__(174);
-	var brownWall = __webpack_require__(175);
-	var orangeWall = __webpack_require__(176);
-	var grayWall = __webpack_require__(177);
+	var darkWall = __webpack_require__(177);
+	var brownWall = __webpack_require__(178);
+	var orangeWall = __webpack_require__(179);
+	var grayWall = __webpack_require__(180);
 
 	function OnePage() {
 	  var styles = {
@@ -86,11 +86,7 @@
 	  return _react2.default.createElement(
 	    'div',
 	    null,
-	    _react2.default.createElement(
-	      _Navbar2.default,
-	      null,
-	      'Navbar'
-	    ),
+	    _react2.default.createElement(_Navbar2.default, null),
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'page-container', style: styles },
@@ -21563,36 +21559,6 @@
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
-
-/***/ },
-/* 175 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/brown_wall.jpg";
-
-/***/ },
-/* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/orange_wall.jpg";
-
-/***/ },
-/* 177 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/gray_wall.jpg";
-
-/***/ },
-/* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/profile.jpeg";
-
-/***/ },
-/* 179 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	var _react = __webpack_require__(1);
@@ -21601,17 +21567,51 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function Navbar(props) {
-	  var navbarStyle = {
-	    background: 'white',
-	    width: '100%',
-	    position: 'fixed',
-	    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)'
-	  };
+	var listStyle = {
+	  position: 'fixed',
+	  margin: '0 auto',
+	  /*  boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)', */
+	  listStyle: 'none',
+	  borderTop: '1px solid black',
+	  borderBottom: '1px solid black',
+	  padding: '5px',
+	  fontFamily: 'Raleway, sans serif',
+	  fontWeight: 200,
+	  left: 0,
+	  right: 0
+	};
+	var itemStyle = {
+	  display: 'inline',
+	  padding: '5px',
+	  textAlign: 'center',
+	  cursor: 'default',
+	  zIndex: 2
+	};
+
+	function Navbar() {
 	  return _react2.default.createElement(
-	    'div',
-	    { style: navbarStyle },
-	    props.children
+	    'ul',
+	    { className: 'col-10', style: listStyle },
+	    _react2.default.createElement(
+	      'li',
+	      { className: 'col-3', style: itemStyle },
+	      'Home'
+	    ),
+	    _react2.default.createElement(
+	      'li',
+	      { className: 'col-3', style: itemStyle },
+	      'Blog'
+	    ),
+	    _react2.default.createElement(
+	      'li',
+	      { className: 'col-3', style: itemStyle },
+	      'Contact'
+	    ),
+	    _react2.default.createElement(
+	      'li',
+	      { className: 'col-3', style: itemStyle },
+	      'About'
+	    )
 	  );
 	}
 
@@ -21622,7 +21622,7 @@
 	module.exports = Navbar;
 
 /***/ },
-/* 180 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21633,7 +21633,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var profilePicture = __webpack_require__(178);
+	var profilePicture = __webpack_require__(176);
 
 	var imageStyle = {
 	  width: 'inherit',
@@ -21705,6 +21705,36 @@
 	}
 
 	module.exports = Description;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/profile.jpeg";
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/brown_wall.jpg";
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/orange_wall.jpg";
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/gray_wall.jpg";
 
 /***/ }
 /******/ ]);

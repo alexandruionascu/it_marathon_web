@@ -23,7 +23,7 @@ function OnePage() {
 
   return (
     <div>
-      <Navbar>Navbar</Navbar>
+      <Navbar />
       <div className="page-container" style={styles}>
         <Page height={pageHeight} background={whiteWall}>
           <Description />
