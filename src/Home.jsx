@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from './containers/Page';
 import Navbar from './containers/Navbar';
-import ListDescription from './containers/ListDescription';
 import Description from './containers/Description';
+import ImageDescription from './containers/ImageDescription';
 import SkillsList from './containers/SkillsList';
 import Header from './containers/Header';
 
@@ -55,7 +55,12 @@ function OnePage() {
 
         </Page>
         <Page height={pageHeight} background={cloudyMountain}>
-          <ListDescription />
+          <Header title="Education" />
+          <ImageDescription src={city}>
+            Faculty of Mathematics and Computer Science at University of Bucharest
+          </ImageDescription>
+          <ImageDescription />
+          <ImageDescription />
         </Page>
         <Page height={pageHeight} background={city} />
         <Page height={pageHeight} background={darkWall} />

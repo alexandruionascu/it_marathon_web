@@ -62,13 +62,13 @@
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
-	var _ListDescription = __webpack_require__(182);
-
-	var _ListDescription2 = _interopRequireDefault(_ListDescription);
-
 	var _Description = __webpack_require__(175);
 
 	var _Description2 = _interopRequireDefault(_Description);
+
+	var _ImageDescription = __webpack_require__(188);
+
+	var _ImageDescription2 = _interopRequireDefault(_ImageDescription);
 
 	var _SkillsList = __webpack_require__(184);
 
@@ -139,7 +139,14 @@
 	      _react2.default.createElement(
 	        _Page2.default,
 	        { height: pageHeight, background: cloudyMountain },
-	        _react2.default.createElement(_ListDescription2.default, null)
+	        _react2.default.createElement(_Header2.default, { title: 'Education' }),
+	        _react2.default.createElement(
+	          _ImageDescription2.default,
+	          { src: city },
+	          'Faculty of Mathematics and Computer Science at University of Bucharest'
+	        ),
+	        _react2.default.createElement(_ImageDescription2.default, null),
+	        _react2.default.createElement(_ImageDescription2.default, null)
 	      ),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: city }),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
@@ -21747,91 +21754,7 @@
 	module.exports = __webpack_require__.p + "images/mountain.jpg";
 
 /***/ },
-/* 182 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var profilePicture = __webpack_require__(176);
-
-	var imageStyle = {
-	  width: 'inherit',
-	  borderRadius: '50%'
-	};
-	var imageContainerStyle = {
-	  display: 'flex',
-	  flexDirection: 'row-reverse'
-	};
-
-	var containerStyle = {
-	  width: '70%',
-	  height: '100%',
-	  display: 'flex',
-	  alignItems: 'center'
-	};
-
-	var listStyle = {
-	  listStyle: 'none',
-	  margin: 0,
-	  padding: 0
-	};
-
-	var itemStyle = {
-	  background: 'black',
-	  display: 'table',
-	  color: 'white',
-	  fontFamily: 'Helvetica'
-	};
-
-	function ListDescription() {
-	  return _react2.default.createElement(
-	    'div',
-	    { style: containerStyle, className: 'container' },
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'col-6', style: imageContainerStyle },
-	      _react2.default.createElement('img', { alt: 'profile', style: imageStyle, src: profilePicture })
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'col-6' },
-	      _react2.default.createElement(
-	        'ul',
-	        { style: listStyle },
-	        _react2.default.createElement(
-	          'li',
-	          { style: itemStyle },
-	          'DEVELOPER'
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          { style: itemStyle },
-	          'HACKER'
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          { style: itemStyle },
-	          'IT ENTHUSIAST'
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          { style: itemStyle },
-	          'STUDENT'
-	        )
-	      )
-	    )
-	  );
-	}
-
-	module.exports = ListDescription;
-
-/***/ },
+/* 182 */,
 /* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -21920,6 +21843,55 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/cloudy_mountain.jpg";
+
+/***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var imageStyle = {
+	  width: '100px',
+	  height: '100px'
+	};
+
+	var containerStyle = {
+	  display: 'flex',
+	  alignItems: 'center',
+	  fontFamily: 'Raleway, sans serif',
+	  fontWeight: 200,
+	  margin: '0 auto'
+	};
+
+	function ImageDescription(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'col-4', style: containerStyle },
+	    _react2.default.createElement('img', { className: 'col-6', alt: 'profile', style: imageStyle, src: props.src }),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'col-6' },
+	      _react2.default.createElement(
+	        'h6',
+	        null,
+	        props.children
+	      )
+	    )
+	  );
+	}
+
+	ImageDescription.propTypes = {
+	  children: _react2.default.PropTypes.string,
+	  src: _react2.default.PropTypes.string.isRequired
+	};
+
+	module.exports = ImageDescription;
 
 /***/ }
 /******/ ]);
