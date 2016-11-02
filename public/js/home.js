@@ -62,17 +62,22 @@
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
+	var _ListDescription = __webpack_require__(182);
+
+	var _ListDescription2 = _interopRequireDefault(_ListDescription);
+
 	var _Description = __webpack_require__(175);
 
 	var _Description2 = _interopRequireDefault(_Description);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var whiteWall = __webpack_require__(173);
+	// const whiteWall = require('.././public/images/white_wall.jpg');
 	var darkWall = __webpack_require__(177);
 	var brownWall = __webpack_require__(178);
 	var orangeWall = __webpack_require__(179);
 	var grayWall = __webpack_require__(180);
+	var mountain = __webpack_require__(181);
 
 	function OnePage() {
 	  var styles = {
@@ -92,10 +97,14 @@
 	      { className: 'page-container', style: styles },
 	      _react2.default.createElement(
 	        _Page2.default,
-	        { height: pageHeight, background: whiteWall },
+	        { height: pageHeight, background: mountain },
 	        _react2.default.createElement(_Description2.default, null)
 	      ),
-	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: grayWall }),
+	      _react2.default.createElement(
+	        _Page2.default,
+	        { height: pageHeight, background: grayWall },
+	        _react2.default.createElement(_ListDescription2.default, null)
+	      ),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: orangeWall }),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: brownWall }),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
@@ -21584,8 +21593,7 @@
 	  display: 'inline',
 	  padding: '5px',
 	  textAlign: 'center',
-	  cursor: 'default',
-	  zIndex: 2
+	  cursor: 'default'
 	};
 
 	function Navbar() {
@@ -21636,6 +21644,104 @@
 	var profilePicture = __webpack_require__(176);
 
 	var imageStyle = {
+	  width: '200px',
+	  height: '200px'
+	};
+
+	var imageContainerStyle = {
+	  display: 'flex',
+	  flexDirection: 'row',
+	  margin: '0 auto',
+	  border: '1px solid black'
+	};
+
+	var containerStyle = {
+	  height: '100%',
+	  display: 'flex',
+	  alignItems: 'center',
+	  fontFamily: 'Raleway, sans serif',
+	  fontWeight: 200
+	};
+
+	function Description() {
+	  return _react2.default.createElement(
+	    'div',
+	    { style: containerStyle, className: 'container' },
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'col-6', style: imageContainerStyle },
+	      _react2.default.createElement('img', { className: 'col-6', alt: 'profile', style: imageStyle, src: profilePicture }),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-6' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Alex'
+	        ),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Ionascu'
+	        )
+	      )
+	    )
+	  );
+	}
+
+	module.exports = Description;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/profile.jpeg";
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/brown_wall.jpg";
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/orange_wall.jpg";
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/gray_wall.jpg";
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/mountain.jpg";
+
+/***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var profilePicture = __webpack_require__(176);
+
+	var imageStyle = {
 	  width: 'inherit',
 	  borderRadius: '50%'
 	};
@@ -21664,7 +21770,7 @@
 	  fontFamily: 'Helvetica'
 	};
 
-	function Description() {
+	function ListDescription() {
 	  return _react2.default.createElement(
 	    'div',
 	    { style: containerStyle, className: 'container' },
@@ -21704,37 +21810,7 @@
 	  );
 	}
 
-	module.exports = Description;
-
-/***/ },
-/* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/profile.jpeg";
-
-/***/ },
-/* 177 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
-
-/***/ },
-/* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/brown_wall.jpg";
-
-/***/ },
-/* 179 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/orange_wall.jpg";
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/gray_wall.jpg";
+	module.exports = ListDescription;
 
 /***/ }
 /******/ ]);

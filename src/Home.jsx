@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from './containers/Page';
 import Navbar from './containers/Navbar';
+import ListDescription from './containers/ListDescription';
 import Description from './containers/Description';
 
-const whiteWall = require('.././public/images/white_wall.jpg');
+// const whiteWall = require('.././public/images/white_wall.jpg');
 const darkWall = require('.././public/images/dark_wall.jpg');
 const brownWall = require('.././public/images/brown_wall.jpg');
 const orangeWall = require('.././public/images/orange_wall.jpg');
 const grayWall = require('.././public/images/gray_wall.jpg');
-
+const mountain = require('.././public/images/mountain.jpg');
 
 function OnePage() {
   const styles = {
@@ -25,10 +26,12 @@ function OnePage() {
     <div>
       <Navbar />
       <div className="page-container" style={styles}>
-        <Page height={pageHeight} background={whiteWall}>
+        <Page height={pageHeight} background={mountain}>
           <Description />
         </Page>
-        <Page height={pageHeight} background={grayWall} />
+        <Page height={pageHeight} background={grayWall}>
+          <ListDescription />
+        </Page>
         <Page height={pageHeight} background={orangeWall} />
         <Page height={pageHeight} background={brownWall} />
         <Page height={pageHeight} background={darkWall} />

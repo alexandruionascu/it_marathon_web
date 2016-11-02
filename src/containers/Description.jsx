@@ -3,47 +3,34 @@ import React from 'react';
 const profilePicture = require('../.././public/images/profile.jpeg');
 
 const imageStyle = {
-  width: 'inherit',
-  borderRadius: '50%',
+  width: '200px',
+  height: '200px',
 };
+
 const imageContainerStyle = {
   display: 'flex',
-  flexDirection: 'row-reverse',
+  flexDirection: 'row',
+  margin: '0 auto',
+  border: '1px solid black',
 };
 
 const containerStyle = {
-  width: '70%',
   height: '100%',
   display: 'flex',
   alignItems: 'center',
-};
-
-const listStyle = {
-  listStyle: 'none',
-  margin: 0,
-  padding: 0,
-};
-
-const itemStyle = {
-  background: 'black',
-  display: 'table',
-  color: 'white',
-  fontFamily: 'Helvetica',
+  fontFamily: 'Raleway, sans serif',
+  fontWeight: 200,
 };
 
 function Description() {
   return (
     <div style={containerStyle} className="container">
       <div className="col-6" style={imageContainerStyle}>
-        <img alt="profile" style={imageStyle} src={profilePicture} />
-      </div>
-      <div className="col-6">
-        <ul style={listStyle}>
-          <li style={itemStyle}>DEVELOPER</li>
-          <li style={itemStyle}>HACKER</li>
-          <li style={itemStyle}>IT ENTHUSIAST</li>
-          <li style={itemStyle}>STUDENT</li>
-        </ul>
+        <img className="col-6" alt="profile" style={imageStyle} src={profilePicture} />
+        <div className="col-6">
+          <h1>Alex</h1>
+          <h1>Ionascu</h1>
+        </div>
       </div>
     </div>
   );

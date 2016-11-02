@@ -18,7 +18,6 @@ const itemStyle = {
   padding: '5px',
   textAlign: 'center',
   cursor: 'default',
-  zIndex: 2,
 };
 
 function Navbar() {
