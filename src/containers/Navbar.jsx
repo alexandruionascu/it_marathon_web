@@ -31,8 +31,4 @@ function Navbar() {
   );
 }
 
-Navbar.propTypes = {
-  children: React.PropTypes.element,
-};
-
 module.exports = Navbar;

@@ -6,6 +6,10 @@ html, body {
   overflow: auto;
 }
 
-app {
+.app {
   overflow: auto;
+}
+
+i {
+  font-size: 50px;
 }

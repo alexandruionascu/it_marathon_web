@@ -70,14 +70,21 @@
 
 	var _Description2 = _interopRequireDefault(_Description);
 
+	var _SkillsList = __webpack_require__(184);
+
+	var _SkillsList2 = _interopRequireDefault(_SkillsList);
+
+	var _Header = __webpack_require__(185);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// const whiteWall = require('.././public/images/white_wall.jpg');
 	var darkWall = __webpack_require__(177);
-	var brownWall = __webpack_require__(178);
-	var orangeWall = __webpack_require__(179);
-	var grayWall = __webpack_require__(180);
 	var mountain = __webpack_require__(181);
+	var sunsetMountain = __webpack_require__(186);
+	var cloudyMountain = __webpack_require__(187);
+	var city = __webpack_require__(183);
 
 	function OnePage() {
 	  var styles = {
@@ -102,11 +109,39 @@
 	      ),
 	      _react2.default.createElement(
 	        _Page2.default,
-	        { height: pageHeight, background: grayWall },
+	        { height: pageHeight, color: 'white', background: sunsetMountain },
+	        _react2.default.createElement(_Header2.default, { title: 'Skills' }),
+	        _react2.default.createElement(
+	          _SkillsList2.default,
+	          { title: 'Experienced' },
+	          _react2.default.createElement('i', { className: 'devicon-cplusplus-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-csharp-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-dot-net-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-nodejs-plain col-3' })
+	        ),
+	        _react2.default.createElement(
+	          _SkillsList2.default,
+	          { title: 'Good Knowledge' },
+	          _react2.default.createElement('i', { className: 'devicon-html5-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-css3-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-java-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-linux-plain col-3' })
+	        ),
+	        _react2.default.createElement(
+	          _SkillsList2.default,
+	          { title: 'Familiar' },
+	          _react2.default.createElement('i', { className: 'devicon-python-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-coffeescript-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-react-plain-wordmark col-3' }),
+	          _react2.default.createElement('i', { className: 'devicon-git-plain-wordmark col-3' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _Page2.default,
+	        { height: pageHeight, background: cloudyMountain },
 	        _react2.default.createElement(_ListDescription2.default, null)
 	      ),
-	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: orangeWall }),
-	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: brownWall }),
+	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: city }),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
 	    )
 	  );
@@ -21525,7 +21560,8 @@
 	        backgroundSize: 'cover',
 	        height: this.props.height,
 	        width: '100%',
-	        overflow: 'auto'
+	        overflow: 'auto',
+	        color: this.props.color
 	      };
 
 	      return _react2.default.createElement(
@@ -21542,7 +21578,8 @@
 	      return {
 	        background: _white_wall2.default,
 	        height: '20%',
-	        overflow: 'auto'
+	        overflow: 'auto',
+	        color: 'black'
 	      };
 	    }
 	  }]);
@@ -21553,7 +21590,8 @@
 	Page.propTypes = {
 	  background: _react2.default.PropTypes.string,
 	  height: _react2.default.PropTypes.string,
-	  children: _react2.default.PropTypes.element
+	  children: _react2.default.PropTypes.element,
+	  color: _react2.default.PropTypes.string
 	};
 
 	module.exports = Page;
@@ -21622,10 +21660,6 @@
 	    )
 	  );
 	}
-
-	Navbar.propTypes = {
-	  children: _react2.default.PropTypes.element
-	};
 
 	module.exports = Navbar;
 
@@ -21704,24 +21738,9 @@
 	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
 
 /***/ },
-/* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/brown_wall.jpg";
-
-/***/ },
-/* 179 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/orange_wall.jpg";
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/gray_wall.jpg";
-
-/***/ },
+/* 178 */,
+/* 179 */,
+/* 180 */,
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -21811,6 +21830,96 @@
 	}
 
 	module.exports = ListDescription;
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/city.jpg";
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Header = __webpack_require__(185);
+
+	var _Header2 = _interopRequireDefault(_Header);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var containerStyle = {
+	  display: 'flex',
+	  alignItems: 'center'
+	};
+
+	function SkillsList(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'col-4' },
+	    _react2.default.createElement(_Header2.default, { title: props.title }),
+	    _react2.default.createElement(
+	      'div',
+	      { style: containerStyle },
+	      props.children
+	    )
+	  );
+	}
+
+	SkillsList.propTypes = {
+	  children: _react2.default.PropTypes.element,
+	  title: _react2.default.PropTypes.string.isRequired
+	};
+	module.exports = SkillsList;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var headerStyle = {
+	  fontFamily: 'Raleway, sans serif',
+	  fontWeight: 200,
+	  textAlign: 'center',
+	  marginTop: '10%'
+	};
+
+	function Header(props) {
+	  return _react2.default.createElement(
+	    'h1',
+	    { style: headerStyle },
+	    props.title
+	  );
+	}
+
+	Header.propTypes = {
+	  title: _react2.default.PropTypes.string.isRequired
+	};
+	module.exports = Header;
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/sunset_mountain.jpg";
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/cloudy_mountain.jpg";
 
 /***/ }
 /******/ ]);
