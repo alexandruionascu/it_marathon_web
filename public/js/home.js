@@ -21631,8 +21631,8 @@
 	  padding: '5px',
 	  fontFamily: 'Raleway, sans serif',
 	  fontWeight: 200,
-	  left: 0,
-	  right: 0
+	  display: 'flex',
+	  alignItems: 'center'
 	};
 	var itemStyle = {
 	  display: 'inline',
@@ -21644,25 +21644,25 @@
 	function Navbar() {
 	  return _react2.default.createElement(
 	    'ul',
-	    { className: 'col-10', style: listStyle },
+	    { className: 'col-12', style: listStyle },
 	    _react2.default.createElement(
 	      'li',
-	      { className: 'col-3', style: itemStyle },
+	      { className: 'col-4', style: itemStyle },
 	      'Home'
 	    ),
 	    _react2.default.createElement(
 	      'li',
-	      { className: 'col-3', style: itemStyle },
+	      { className: 'col-4', style: itemStyle },
 	      'Blog'
 	    ),
 	    _react2.default.createElement(
 	      'li',
-	      { className: 'col-3', style: itemStyle },
+	      { className: 'col-4', style: itemStyle },
 	      'Contact'
 	    ),
 	    _react2.default.createElement(
 	      'li',
-	      { className: 'col-3', style: itemStyle },
+	      { className: 'col-4', style: itemStyle },
 	      'About'
 	    )
 	  );
@@ -21685,8 +21685,10 @@
 	var profilePicture = __webpack_require__(176);
 
 	var imageStyle = {
-	  width: '200px',
-	  height: '200px'
+	  width: '100%',
+	  maxWidth: '200px',
+	  minWidth: '150px',
+	  height: 'auto'
 	};
 
 	var imageContainerStyle = {
@@ -21704,6 +21706,13 @@
 	  fontWeight: 200
 	};
 
+	var textStyle = {
+	  display: 'flex',
+	  flexDirection: 'column',
+	  alignItems: 'center',
+	  justifyItems: 'center'
+	};
+
 	function Description() {
 	  return _react2.default.createElement(
 	    'div',
@@ -21714,16 +21723,11 @@
 	      _react2.default.createElement('img', { className: 'col-6', alt: 'profile', style: imageStyle, src: profilePicture }),
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'col-6' },
+	        { className: 'col-6', style: textStyle },
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Alex'
-	        ),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Ionascu'
+	          'Alex Ionascu'
 	        )
 	      )
 	    )

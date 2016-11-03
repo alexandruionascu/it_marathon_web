@@ -10,8 +10,8 @@ const listStyle = {
   padding: '5px',
   fontFamily: 'Raleway, sans serif',
   fontWeight: 200,
-  left: 0,
-  right: 0,
+  display: 'flex',
+  alignItems: 'center',
 };
 const itemStyle = {
   display: 'inline',
@@ -22,11 +22,11 @@ const itemStyle = {
 
 function Navbar() {
   return (
-    <ul className="col-10" style={listStyle}>
-      <li className="col-3" style={itemStyle}>Home</li>
-      <li className="col-3" style={itemStyle}>Blog</li>
-      <li className="col-3" style={itemStyle}>Contact</li>
-      <li className="col-3" style={itemStyle}>About</li>
+    <ul className="col-12" style={listStyle}>
+      <li className="col-4" style={itemStyle}>Home</li>
+      <li className="col-4" style={itemStyle}>Blog</li>
+      <li className="col-4" style={itemStyle}>Contact</li>
+      <li className="col-4" style={itemStyle}>About</li>
     </ul>
   );
 }
