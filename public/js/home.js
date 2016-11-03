@@ -21708,7 +21708,6 @@
 
 	var textStyle = {
 	  display: 'flex',
-	  flexDirection: 'column',
 	  alignItems: 'center',
 	  justifyItems: 'center'
 	};

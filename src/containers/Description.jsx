@@ -26,7 +26,6 @@ const containerStyle = {
 
 const textStyle = {
   display: 'flex',
-  flexDirection: 'column',
   alignItems: 'center',
   justifyItems: 'center',
 };
