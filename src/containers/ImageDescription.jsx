@@ -13,12 +13,17 @@ const containerStyle = {
   margin: '0 auto',
 };
 
+const fontStyle = {
+  font: 'Raleway, sans serif',
+  fontWeight: 200,
+};
+
 function ImageDescription(props) {
   return (
     <div className="col-4" style={containerStyle}>
       <img className="col-6" alt="profile" style={imageStyle} src={props.src} />
       <div className="col-6">
-        <h6>{props.children}</h6>
+        <h6 style={fontStyle}>{props.children}</h6>
       </div>
     </div>
   );

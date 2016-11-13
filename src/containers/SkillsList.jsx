@@ -4,6 +4,8 @@ import Header from './Header';
 const containerStyle = {
   display: 'flex',
   alignItems: 'center',
+  flexDirection: 'row',
+  textAlign: 'center',
 };
 
 function SkillsList(props) {

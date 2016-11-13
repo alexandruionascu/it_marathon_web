@@ -66,31 +66,38 @@
 
 	var _Description2 = _interopRequireDefault(_Description);
 
-	var _ImageDescription = __webpack_require__(188);
+	var _ImageDescription = __webpack_require__(177);
 
 	var _ImageDescription2 = _interopRequireDefault(_ImageDescription);
 
-	var _SkillsList = __webpack_require__(184);
+	var _SkillsList = __webpack_require__(178);
 
 	var _SkillsList2 = _interopRequireDefault(_SkillsList);
 
-	var _Header = __webpack_require__(185);
+	var _Header = __webpack_require__(179);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var darkWall = __webpack_require__(177);
+	var darkWall = __webpack_require__(180);
 	var mountain = __webpack_require__(181);
-	var sunsetMountain = __webpack_require__(186);
-	var cloudyMountain = __webpack_require__(187);
-	var city = __webpack_require__(183);
+	var sunsetMountain = __webpack_require__(182);
+	var cloudyMountain = __webpack_require__(183);
+	var city = __webpack_require__(184);
 
 	function OnePage() {
-	  var styles = {
+	  var pageContainerStyle = {
 	    height: '500%',
 	    width: '100%',
 	    overflow: 'auto'
+	  };
+
+	  var pageContentStyle = {
+	    height: '100%',
+	    display: 'flex',
+	    alignItems: 'center',
+	    flexWrap: 'wrap'
 	  };
 
 	  var pageHeight = '20%';
@@ -101,7 +108,7 @@
 	    _react2.default.createElement(_Navbar2.default, null),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'page-container', style: styles },
+	      { className: 'page-container', style: pageContainerStyle },
 	      _react2.default.createElement(
 	        _Page2.default,
 	        { height: pageHeight, background: mountain },
@@ -110,30 +117,33 @@
 	      _react2.default.createElement(
 	        _Page2.default,
 	        { height: pageHeight, color: 'white', background: sunsetMountain },
-	        _react2.default.createElement(_Header2.default, { title: 'Skills' }),
 	        _react2.default.createElement(
-	          _SkillsList2.default,
-	          { title: 'Experienced' },
-	          _react2.default.createElement('i', { className: 'devicon-cplusplus-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-csharp-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-dot-net-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-nodejs-plain col-3' })
-	        ),
-	        _react2.default.createElement(
-	          _SkillsList2.default,
-	          { title: 'Good Knowledge' },
-	          _react2.default.createElement('i', { className: 'devicon-html5-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-css3-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-java-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-linux-plain col-3' })
-	        ),
-	        _react2.default.createElement(
-	          _SkillsList2.default,
-	          { title: 'Familiar' },
-	          _react2.default.createElement('i', { className: 'devicon-python-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-coffeescript-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-react-plain-wordmark col-3' }),
-	          _react2.default.createElement('i', { className: 'devicon-git-plain-wordmark col-3' })
+	          'div',
+	          { style: pageContentStyle },
+	          _react2.default.createElement(
+	            _SkillsList2.default,
+	            { title: 'Experienced' },
+	            _react2.default.createElement('i', { className: 'devicon-cplusplus-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-csharp-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-dot-net-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-nodejs-plain col-3' })
+	          ),
+	          _react2.default.createElement(
+	            _SkillsList2.default,
+	            { title: 'Good' },
+	            _react2.default.createElement('i', { className: 'devicon-html5-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-css3-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-java-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-linux-plain col-3' })
+	          ),
+	          _react2.default.createElement(
+	            _SkillsList2.default,
+	            { title: 'Familiar' },
+	            _react2.default.createElement('i', { className: 'devicon-python-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-coffeescript-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-react-plain-wordmark col-3' }),
+	            _react2.default.createElement('i', { className: 'devicon-git-plain-wordmark col-3' })
+	          )
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -145,10 +155,42 @@
 	          { src: city },
 	          'Faculty of Mathematics and Computer Science at University of Bucharest'
 	        ),
-	        _react2.default.createElement(_ImageDescription2.default, null),
-	        _react2.default.createElement(_ImageDescription2.default, null)
+	        _react2.default.createElement(
+	          _ImageDescription2.default,
+	          { src: city },
+	          'Specialization:',
+	          _react2.default.createElement('br', null),
+	          'Computer Science',
+	          _react2.default.createElement('br', null),
+	          'Expected Graduation: 2018'
+	        ),
+	        _react2.default.createElement(
+	          _ImageDescription2.default,
+	          { src: city },
+	          'Previous:',
+	          _react2.default.createElement('br', null),
+	          'National Collage Gheorghe Rosca Codrenu'
+	        )
 	      ),
-	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: city }),
+	      _react2.default.createElement(
+	        _Page2.default,
+	        { height: pageHeight, background: city },
+	        _react2.default.createElement(_Header2.default, { title: 'Experience' }),
+	        _react2.default.createElement(
+	          'div',
+	          { style: pageContentStyle },
+	          _react2.default.createElement(
+	            _ImageDescription2.default,
+	            null,
+	            'C++ Developer at EA'
+	          ),
+	          _react2.default.createElement(
+	            _ImageDescription2.default,
+	            null,
+	            'C++ Developer at Societe Generale'
+	          )
+	        )
+	      ),
 	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
 	    )
 	  );
@@ -21687,7 +21729,7 @@
 	var imageStyle = {
 	  width: '100%',
 	  maxWidth: '200px',
-	  minWidth: '150px',
+	  minWidth: '100px',
 	  height: 'auto'
 	};
 
@@ -21712,6 +21754,10 @@
 	  justifyItems: 'center'
 	};
 
+	var titleStyle = {
+	  marginLeft: '10%'
+	};
+
 	function Description() {
 	  return _react2.default.createElement(
 	    'div',
@@ -21725,7 +21771,7 @@
 	        { className: 'col-6', style: textStyle },
 	        _react2.default.createElement(
 	          'h1',
-	          null,
+	          { style: titleStyle },
 	          'Alex Ionascu'
 	        )
 	      )
@@ -21745,26 +21791,58 @@
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var imageStyle = {
+	  width: '100px',
+	  height: '100px'
+	};
+
+	var containerStyle = {
+	  display: 'flex',
+	  alignItems: 'center',
+	  fontFamily: 'Raleway, sans serif',
+	  fontWeight: 200,
+	  margin: '0 auto'
+	};
+
+	var fontStyle = {
+	  font: 'Raleway, sans serif',
+	  fontWeight: 200
+	};
+
+	function ImageDescription(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'col-4', style: containerStyle },
+	    _react2.default.createElement('img', { className: 'col-6', alt: 'profile', style: imageStyle, src: props.src }),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'col-6' },
+	      _react2.default.createElement(
+	        'h6',
+	        { style: fontStyle },
+	        props.children
+	      )
+	    )
+	  );
+	}
+
+	ImageDescription.propTypes = {
+	  children: _react2.default.PropTypes.string,
+	  src: _react2.default.PropTypes.string.isRequired
+	};
+
+	module.exports = ImageDescription;
 
 /***/ },
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/mountain.jpg";
-
-/***/ },
-/* 182 */,
-/* 183 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/city.jpg";
-
-/***/ },
-/* 184 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21773,7 +21851,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Header = __webpack_require__(185);
+	var _Header = __webpack_require__(179);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
@@ -21781,7 +21859,9 @@
 
 	var containerStyle = {
 	  display: 'flex',
-	  alignItems: 'center'
+	  alignItems: 'center',
+	  flexDirection: 'row',
+	  textAlign: 'center'
 	};
 
 	function SkillsList(props) {
@@ -21804,7 +21884,7 @@
 	module.exports = SkillsList;
 
 /***/ },
-/* 185 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21836,65 +21916,34 @@
 	module.exports = Header;
 
 /***/ },
-/* 186 */
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/dark_wall.jpg";
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/mountain.jpg";
+
+/***/ },
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/sunset_mountain.jpg";
 
 /***/ },
-/* 187 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/cloudy_mountain.jpg";
 
 /***/ },
-/* 188 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var imageStyle = {
-	  width: '100px',
-	  height: '100px'
-	};
-
-	var containerStyle = {
-	  display: 'flex',
-	  alignItems: 'center',
-	  fontFamily: 'Raleway, sans serif',
-	  fontWeight: 200,
-	  margin: '0 auto'
-	};
-
-	function ImageDescription(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'col-4', style: containerStyle },
-	    _react2.default.createElement('img', { className: 'col-6', alt: 'profile', style: imageStyle, src: props.src }),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'col-6' },
-	      _react2.default.createElement(
-	        'h6',
-	        null,
-	        props.children
-	      )
-	    )
-	  );
-	}
-
-	ImageDescription.propTypes = {
-	  children: _react2.default.PropTypes.string,
-	  src: _react2.default.PropTypes.string.isRequired
-	};
-
-	module.exports = ImageDescription;
+	module.exports = __webpack_require__.p + "images/city.jpg";
 
 /***/ }
 /******/ ]);

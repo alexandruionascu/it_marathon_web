@@ -1,9 +1,6 @@
 /* Small screens (default) */
 html { font-size: 100%; }
 
-h1 {
-  font-size: 22px;
-}
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
@@ -23,15 +20,16 @@ h1 {
 }
 .container {
   margin: 0 auto;
-  float: none;
 }
 
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
+    padding: 5px;
+    float: left;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -45,6 +43,10 @@ h1 {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
+    i {
+      font-size: 30px;
+    }
 
     [class*="col-"] {
       padding: 15px;
