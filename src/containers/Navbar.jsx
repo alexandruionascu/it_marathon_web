@@ -24,9 +24,16 @@ function Navbar() {
   return (
     <ul className="col-12" style={listStyle}>
       <li className="col-4" style={itemStyle}>Home</li>
-      <li className="col-4" style={itemStyle}>Blog</li>
+      <li className="col-4 dropdown">
+        <div className="dropbtn">Blog</div>
+        <div className="dropdown-content">
+          <a href="/algorithms">Projects</a>
+          <a href="/personal">Algorithms</a>
+          <a href="/blank">Personal</a>
+        </div>
+      </li>
+      <li className="col-4" style={itemStyle}>Experience</li>
       <li className="col-4" style={itemStyle}>Contact</li>
-      <li className="col-4" style={itemStyle}>About</li>
     </ul>
   );
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 
-const profilePicture = require('../.././public/images/profile.jpeg');
-
 const imageStyle = {
   width: '100%',
   maxWidth: '200px',
@@ -35,17 +33,22 @@ const titleStyle = {
   marginLeft: '10%',
 };
 
-function Description() {
+function Description(props) {
   return (
     <div style={containerStyle} className="container">
       <div className="col-6" style={imageContainerStyle}>
-        <img className="col-6" alt="profile" style={imageStyle} src={profilePicture} />
+        <img className="col-6" alt="profile" style={imageStyle} src={props.imageSource} />
         <div className="col-6" style={textStyle}>
-          <h1 style={titleStyle}>Alex Ionascu</h1>
+          <h1 style={titleStyle}>{props.children}</h1>
         </div>
       </div>
     </div>
   );
 }
+
+Description.propTypes = {
+  children: React.PropTypes.string,
+  imageSource: React.PropTypes.string.isRequired,
+};
 
 module.exports = Description;

@@ -85,6 +85,12 @@
 	var sunsetMountain = __webpack_require__(182);
 	var cloudyMountain = __webpack_require__(183);
 	var city = __webpack_require__(184);
+	var societeGeneraleLogo = __webpack_require__(185);
+	var eaLogo = __webpack_require__(186);
+	var fmiLogo = __webpack_require__(187);
+	var fmiEntrance = __webpack_require__(188);
+	var codreanu = __webpack_require__(189);
+	var profilePicture = __webpack_require__(176);
 
 	function OnePage() {
 	  var pageContainerStyle = {
@@ -97,7 +103,8 @@
 	    height: '100%',
 	    display: 'flex',
 	    alignItems: 'center',
-	    flexWrap: 'wrap'
+	    flexWrap: 'wrap',
+	    justifyContent: 'center'
 	  };
 
 	  var pageHeight = '20%';
@@ -112,7 +119,11 @@
 	      _react2.default.createElement(
 	        _Page2.default,
 	        { height: pageHeight, background: mountain },
-	        _react2.default.createElement(_Description2.default, null)
+	        _react2.default.createElement(
+	          _Description2.default,
+	          { imageSource: profilePicture },
+	          'Alex Ionascu'
+	        )
 	      ),
 	      _react2.default.createElement(
 	        _Page2.default,
@@ -149,49 +160,53 @@
 	      _react2.default.createElement(
 	        _Page2.default,
 	        { height: pageHeight, background: cloudyMountain },
-	        _react2.default.createElement(_Header2.default, { title: 'Education' }),
-	        _react2.default.createElement(
-	          _ImageDescription2.default,
-	          { src: city },
-	          'Faculty of Mathematics and Computer Science at University of Bucharest'
-	        ),
-	        _react2.default.createElement(
-	          _ImageDescription2.default,
-	          { src: city },
-	          'Specialization:',
-	          _react2.default.createElement('br', null),
-	          'Computer Science',
-	          _react2.default.createElement('br', null),
-	          'Expected Graduation: 2018'
-	        ),
-	        _react2.default.createElement(
-	          _ImageDescription2.default,
-	          { src: city },
-	          'Previous:',
-	          _react2.default.createElement('br', null),
-	          'National Collage Gheorghe Rosca Codrenu'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _Page2.default,
-	        { height: pageHeight, background: city },
-	        _react2.default.createElement(_Header2.default, { title: 'Experience' }),
 	        _react2.default.createElement(
 	          'div',
 	          { style: pageContentStyle },
 	          _react2.default.createElement(
 	            _ImageDescription2.default,
-	            null,
-	            'C++ Developer at EA'
+	            { src: fmiLogo },
+	            'Faculty of Mathematics and Computer Science at University of Bucharest'
 	          ),
 	          _react2.default.createElement(
 	            _ImageDescription2.default,
-	            null,
-	            'C++ Developer at Societe Generale'
+	            { src: fmiEntrance },
+	            'Specialization: Computer Science: Expected Graduation: 2018'
+	          ),
+	          _react2.default.createElement(
+	            _ImageDescription2.default,
+	            { src: codreanu },
+	            'Previous: National Collage Gheorghe Rosca Codrenu'
 	          )
 	        )
 	      ),
-	      _react2.default.createElement(_Page2.default, { height: pageHeight, background: darkWall })
+	      _react2.default.createElement(
+	        _Page2.default,
+	        { height: pageHeight, background: city },
+	        _react2.default.createElement(
+	          'div',
+	          { style: pageContentStyle },
+	          _react2.default.createElement(
+	            _ImageDescription2.default,
+	            { src: eaLogo },
+	            'C++ Developer at EA Sports Fifa 17 Ultimate Team'
+	          ),
+	          _react2.default.createElement(
+	            _ImageDescription2.default,
+	            { src: societeGeneraleLogo },
+	            'C++ Developer at Societe Generale on High Frequency Trading'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _Page2.default,
+	        { height: pageHeight, background: mountain },
+	        _react2.default.createElement(
+	          _Description2.default,
+	          { imageSource: profilePicture },
+	          'Contact'
+	        )
+	      )
 	    )
 	  );
 	}
@@ -21694,18 +21709,41 @@
 	    ),
 	    _react2.default.createElement(
 	      'li',
+	      { className: 'col-4 dropdown' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'dropbtn' },
+	        'Blog'
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'dropdown-content' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: '/algorithms' },
+	          'Projects'
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: '/personal' },
+	          'Algorithms'
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: '/blank' },
+	          'Personal'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'li',
 	      { className: 'col-4', style: itemStyle },
-	      'Blog'
+	      'Experience'
 	    ),
 	    _react2.default.createElement(
 	      'li',
 	      { className: 'col-4', style: itemStyle },
 	      'Contact'
-	    ),
-	    _react2.default.createElement(
-	      'li',
-	      { className: 'col-4', style: itemStyle },
-	      'About'
 	    )
 	  );
 	}
@@ -21723,8 +21761,6 @@
 	var _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var profilePicture = __webpack_require__(176);
 
 	var imageStyle = {
 	  width: '100%',
@@ -21758,26 +21794,31 @@
 	  marginLeft: '10%'
 	};
 
-	function Description() {
+	function Description(props) {
 	  return _react2.default.createElement(
 	    'div',
 	    { style: containerStyle, className: 'container' },
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'col-6', style: imageContainerStyle },
-	      _react2.default.createElement('img', { className: 'col-6', alt: 'profile', style: imageStyle, src: profilePicture }),
+	      _react2.default.createElement('img', { className: 'col-6', alt: 'profile', style: imageStyle, src: props.imageSource }),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'col-6', style: textStyle },
 	        _react2.default.createElement(
 	          'h1',
 	          { style: titleStyle },
-	          'Alex Ionascu'
+	          props.children
 	        )
 	      )
 	    )
 	  );
 	}
+
+	Description.propTypes = {
+	  children: _react2.default.PropTypes.string,
+	  imageSource: _react2.default.PropTypes.string.isRequired
+	};
 
 	module.exports = Description;
 
@@ -21808,13 +21849,16 @@
 	  display: 'flex',
 	  alignItems: 'center',
 	  fontFamily: 'Raleway, sans serif',
-	  fontWeight: 200,
-	  margin: '0 auto'
+	  background: '#ffffffb3',
+	  border: '1px solid black',
+	  fontSize: 12,
+	  flex: 1
 	};
 
 	var fontStyle = {
 	  font: 'Raleway, sans serif',
-	  fontWeight: 200
+	  fontWeight: 200,
+	  flex: 1
 	};
 
 	function ImageDescription(props) {
@@ -21899,7 +21943,7 @@
 	  fontFamily: 'Raleway, sans serif',
 	  fontWeight: 200,
 	  textAlign: 'center',
-	  marginTop: '10%'
+	  alignSelf: 'flex-start'
 	};
 
 	function Header(props) {
@@ -21944,6 +21988,36 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/city.jpg";
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/societe_generale.png";
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/ea_logo.jpg";
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/fmi.jpg";
+
+/***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/fmi_entrance.jpg";
+
+/***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/codreanu.jpg";
 
 /***/ }
 /******/ ]);

@@ -12,6 +12,12 @@ const mountain = require('.././public/images/mountain.jpg');
 const sunsetMountain = require('.././public/images/sunset_mountain.jpg');
 const cloudyMountain = require('.././public/images/cloudy_mountain.jpg');
 const city = require('.././public/images/city.jpg');
+const societeGeneraleLogo = require('.././public/images/societe_generale.png');
+const eaLogo = require('.././public/images/ea_logo.jpg');
+const fmiLogo = require('.././public/images/fmi.jpg');
+const fmiEntrance = require('.././public/images/fmi_entrance.jpg');
+const codreanu = require('.././public/images/codreanu.jpg');
+const profilePicture = require('.././public/images/profile.jpeg');
 
 function OnePage() {
   const pageContainerStyle = {
@@ -25,6 +31,7 @@ function OnePage() {
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
+    justifyContent: 'center',
   };
 
   const pageHeight = '20%';
@@ -34,7 +41,9 @@ function OnePage() {
       <Navbar />
       <div className="page-container" style={pageContainerStyle}>
         <Page height={pageHeight} background={mountain}>
-          <Description />
+          <Description imageSource={profilePicture}>
+            Alex Ionascu
+          </Description>
         </Page>
         <Page height={pageHeight} color="white" background={sunsetMountain}>
           <div style={pageContentStyle}>
@@ -61,35 +70,33 @@ function OnePage() {
           </div>
         </Page>
         <Page height={pageHeight} background={cloudyMountain}>
-          <Header title="Education" />
-          <ImageDescription src={city}>
-            Faculty of Mathematics and Computer Science at University of Bucharest
-          </ImageDescription>
-          <ImageDescription src={city}>
-            Specialization:
-            <br />
-            Computer Science
-            <br />
-            Expected Graduation: 2018
-          </ImageDescription>
-          <ImageDescription src={city}>
-            Previous:
-            <br />
-            National Collage Gheorghe Rosca Codrenu
-          </ImageDescription>
-        </Page>
-        <Page height={pageHeight} background={city} >
-          <Header title="Experience" />
           <div style={pageContentStyle}>
-            <ImageDescription>
-              C++ Developer at EA
+            <ImageDescription src={fmiLogo}>
+              Faculty of Mathematics and Computer Science at University of Bucharest
             </ImageDescription>
-            <ImageDescription>
-              C++ Developer at Societe Generale
+            <ImageDescription src={fmiEntrance}>
+              Specialization: Computer Science: Expected Graduation: 2018
+            </ImageDescription>
+            <ImageDescription src={codreanu}>
+              Previous: National Collage Gheorghe Rosca Codrenu
             </ImageDescription>
           </div>
         </Page>
-        <Page height={pageHeight} background={darkWall} />
+        <Page height={pageHeight} background={city} >
+          <div style={pageContentStyle}>
+            <ImageDescription src={eaLogo}>
+              C++ Developer at EA Sports Fifa 17 Ultimate Team
+            </ImageDescription>
+            <ImageDescription src={societeGeneraleLogo}>
+              C++ Developer at Societe Generale on High Frequency Trading
+            </ImageDescription>
+          </div>
+        </Page>
+        <Page height={pageHeight} background={mountain}>
+          <Description imageSource={profilePicture}>
+            Contact
+          </Description>
+        </Page>
       </div>
     </div>
   );

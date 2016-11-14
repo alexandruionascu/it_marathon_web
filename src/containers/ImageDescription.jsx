@@ -9,13 +9,16 @@ const containerStyle = {
   display: 'flex',
   alignItems: 'center',
   fontFamily: 'Raleway, sans serif',
-  fontWeight: 200,
-  margin: '0 auto',
+  background: '#ffffffb3',
+  border: '1px solid black',
+  fontSize: 12,
+  flex: 1,
 };
 
 const fontStyle = {
   font: 'Raleway, sans serif',
   fontWeight: 200,
+  flex: 1,
 };
 
 function ImageDescription(props) {

@@ -4,7 +4,7 @@ const headerStyle = {
   fontFamily: 'Raleway, sans serif',
   fontWeight: 200,
   textAlign: 'center',
-  marginTop: '10%',
+  alignSelf: 'flex-start',
 };
 
 function Header(props) {
