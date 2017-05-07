@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    home: './src/Home.jsx',
+    home: './src/Home.jsx'
   },
   output: {
     path: __dirname,
